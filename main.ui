@@ -1,0 +1,1164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1440</width>
+    <height>798</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="title">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>40</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>35</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>IMAGE PROCESSING</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>70</y>
+      <width>341</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>D E V E L O P   U S I N G   P Y T H O N 3</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>110</y>
+      <width>351</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>g u i   b y    P y Q t 5    and   l i b r a r y   by   P i l l o w</string>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>160</y>
+      <width>391</width>
+      <height>281</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView_2">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>160</y>
+      <width>391</width>
+      <height>281</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QtCharts::QChartView" name="chartview">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>470</y>
+      <width>831</width>
+      <height>331</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1440</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionCopy"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuFlip">
+     <property name="title">
+      <string>Flip</string>
+     </property>
+     <addaction name="actionHorizontal_flip"/>
+     <addaction name="actionVertical_flip"/>
+    </widget>
+    <widget class="QMenu" name="menuLayer">
+     <property name="title">
+      <string>Layer</string>
+     </property>
+     <addaction name="actionRGB_layer"/>
+     <addaction name="actionRed_layer"/>
+     <addaction name="actionGreen_layer"/>
+     <addaction name="actionBlue_layer"/>
+    </widget>
+    <widget class="QMenu" name="menuBlack_White">
+     <property name="title">
+      <string>Black White</string>
+     </property>
+     <widget class="QMenu" name="menuThreshold">
+      <property name="title">
+       <string>Threshold</string>
+      </property>
+      <addaction name="action100_blackWhite"/>
+      <addaction name="action200_blackWhite"/>
+      <addaction name="actionAverage_threshold_black_white"/>
+     </widget>
+     <addaction name="actionBlack_white_black_white"/>
+     <addaction name="menuThreshold"/>
+    </widget>
+    <widget class="QMenu" name="menuDetection">
+     <property name="title">
+      <string>Detection</string>
+     </property>
+     <widget class="QMenu" name="menuLine">
+      <property name="title">
+       <string>Line</string>
+      </property>
+      <addaction name="actionHorizontal_line_detection"/>
+      <addaction name="actionVertical_line_detection"/>
+     </widget>
+     <addaction name="actionEdge_detection"/>
+     <addaction name="menuLine"/>
+     <addaction name="actionNode_detection"/>
+    </widget>
+    <widget class="QMenu" name="menuGrayscale">
+     <property name="title">
+      <string>Grayscale</string>
+     </property>
+     <widget class="QMenu" name="menuGrayscale_2">
+      <property name="title">
+       <string>Grayscale</string>
+      </property>
+      <addaction name="actionRGB_grayscale"/>
+      <addaction name="actionRed_grayscale"/>
+      <addaction name="actionGreen_grayscale"/>
+      <addaction name="actionBlue_grayscale"/>
+     </widget>
+     <widget class="QMenu" name="menuQuantization_grayscale">
+      <property name="title">
+       <string>Quantization</string>
+      </property>
+      <addaction name="action8_grayscale_quantization"/>
+      <addaction name="action16_grayscale_quantization"/>
+      <addaction name="action32_grayscale_quantization"/>
+      <addaction name="action64_grayscale_quantization"/>
+     </widget>
+     <widget class="QMenu" name="menuBrightness_grayscale">
+      <property name="title">
+       <string>Brightness</string>
+      </property>
+      <addaction name="actionLow_grayscale_brightness"/>
+      <addaction name="actionMedium_grayscale_brightness"/>
+      <addaction name="actionHigh_grayscale_brightness"/>
+     </widget>
+     <widget class="QMenu" name="menuContrast_grayscale">
+      <property name="title">
+       <string>Contrast</string>
+      </property>
+      <addaction name="actionLow_grayscale_contrast"/>
+      <addaction name="actionMedium_grayscale_contrast"/>
+      <addaction name="actionHigh_grayscale_contrast"/>
+     </widget>
+     <widget class="QMenu" name="menuFilter_grayscale">
+      <property name="title">
+       <string>Filter</string>
+      </property>
+      <widget class="QMenu" name="menuNode">
+       <property name="title">
+        <string>Node</string>
+       </property>
+       <widget class="QMenu" name="menu4_grayscale">
+        <property name="title">
+         <string>4</string>
+        </property>
+        <addaction name="actionConvolution_1_grayscale_filter4node"/>
+        <addaction name="actionConvolution_2_grayscale_filter4node"/>
+        <addaction name="actionConvolution_3_grayscale_filter4node"/>
+       </widget>
+       <widget class="QMenu" name="menu8_grayscale">
+        <property name="title">
+         <string>8</string>
+        </property>
+        <addaction name="actionConvolution_1_grayscale_filter8node"/>
+        <addaction name="actionConvolution_2_grayscale_filter8node"/>
+        <addaction name="actionConvolution_3_grayscale_filter8node"/>
+       </widget>
+       <addaction name="menu4_grayscale"/>
+       <addaction name="menu8_grayscale"/>
+      </widget>
+      <addaction name="menuNode"/>
+      <addaction name="actionAverage_grayscale_filter"/>
+      <addaction name="actionGaussian_grayscale_filter"/>
+      <addaction name="actionMedian_grayscale_filter"/>
+     </widget>
+     <widget class="QMenu" name="menuNoise_grayscale">
+      <property name="title">
+       <string>Noise</string>
+      </property>
+      <widget class="QMenu" name="menuGaussian">
+       <property name="title">
+        <string>Gaussian</string>
+       </property>
+       <widget class="QMenu" name="menuProbability">
+        <property name="title">
+         <string>Probability</string>
+        </property>
+        <addaction name="action5_grayscale_noise_gaussian"/>
+        <addaction name="action10_grayscale_noise_gaussian"/>
+        <addaction name="action20_grayscale_noise_gaussian"/>
+        <addaction name="action30_grayscale_noise_gaussian"/>
+        <addaction name="action40_grayscale_noise_gaussian"/>
+       </widget>
+       <addaction name="actionGaussian_grayscale_noise_gaussian"/>
+       <addaction name="menuProbability"/>
+      </widget>
+      <widget class="QMenu" name="menuSpeckle">
+       <property name="title">
+        <string>Speckle</string>
+       </property>
+       <widget class="QMenu" name="menuProbability_2">
+        <property name="title">
+         <string>Probability</string>
+        </property>
+        <addaction name="action5_grayscale_noise_speckle"/>
+        <addaction name="action10_grayscale_noise_speckle"/>
+        <addaction name="action20_grayscale_noise_speckle"/>
+        <addaction name="action30_grayscale_noise_speckle"/>
+        <addaction name="action40_grayscale_noise_speckle"/>
+       </widget>
+       <addaction name="actionSpeckle_grayscale_noise_speckle"/>
+       <addaction name="menuProbability_2"/>
+      </widget>
+      <widget class="QMenu" name="menuSalt_and_Pepper">
+       <property name="title">
+        <string>Salt and Pepper</string>
+       </property>
+       <widget class="QMenu" name="menuProbabilty">
+        <property name="title">
+         <string>Probabilty</string>
+        </property>
+        <addaction name="action5_noise_saltnpepper"/>
+        <addaction name="action10_noise_saltnpepper"/>
+        <addaction name="action20_noise_saltnpepper"/>
+        <addaction name="action30_noise_saltnpepper"/>
+        <addaction name="action40_noise_saltnpepper"/>
+       </widget>
+       <addaction name="actionSalt_and_Pepper_grayscale_noise_saltnpepper"/>
+       <addaction name="menuProbabilty"/>
+      </widget>
+      <addaction name="menuGaussian"/>
+      <addaction name="menuSpeckle"/>
+      <addaction name="menuSalt_and_Pepper"/>
+     </widget>
+     <widget class="QMenu" name="menuMethod_grayscale">
+      <property name="title">
+       <string>Method</string>
+      </property>
+      <addaction name="actionRobert_grayscale_method"/>
+      <addaction name="actionPrewitt_grayscale_method"/>
+      <addaction name="actionSobel_grayscale_method"/>
+      <addaction name="actionLaplacian_grayscale_method"/>
+     </widget>
+     <widget class="QMenu" name="menuSharpness">
+      <property name="title">
+       <string>Sharpness</string>
+      </property>
+      <addaction name="actionLPF_grayscale_sharpness"/>
+      <addaction name="actionHPF_grayscale_sharpness"/>
+      <addaction name="actionSharpness_grayscale_sharpness"/>
+     </widget>
+     <addaction name="menuGrayscale_2"/>
+     <addaction name="menuQuantization_grayscale"/>
+     <addaction name="menuBrightness_grayscale"/>
+     <addaction name="menuContrast_grayscale"/>
+     <addaction name="actionInvers_grayscale"/>
+     <addaction name="actionAutolevel_grayscale"/>
+     <addaction name="menuFilter_grayscale"/>
+     <addaction name="menuNoise_grayscale"/>
+     <addaction name="menuMethod_grayscale"/>
+     <addaction name="menuSharpness"/>
+     <addaction name="actionEqualization_grayscale"/>
+    </widget>
+    <widget class="QMenu" name="menuFull_Color">
+     <property name="title">
+      <string>Full Color</string>
+     </property>
+     <widget class="QMenu" name="menuQuantization_full_color">
+      <property name="title">
+       <string>Quantization</string>
+      </property>
+      <addaction name="action8_full_color_quantization"/>
+      <addaction name="action16_full_color_quantization"/>
+      <addaction name="action32_full_color_quantization"/>
+      <addaction name="action64_full_color_quantization"/>
+     </widget>
+     <widget class="QMenu" name="menuBrightness__full_color">
+      <property name="title">
+       <string>Brightness</string>
+      </property>
+      <addaction name="actionLow_full_color_brightness"/>
+      <addaction name="actionMedium_full_color_brightness"/>
+      <addaction name="actionHigh_full_color_brightness"/>
+     </widget>
+     <widget class="QMenu" name="menuContrast__full_color">
+      <property name="title">
+       <string>Contrast</string>
+      </property>
+      <addaction name="actionLow_full_color_contrast"/>
+      <addaction name="actionMedium_full_color_contrast"/>
+      <addaction name="actionHigh_full_color_contrast"/>
+     </widget>
+     <widget class="QMenu" name="menuFilter_full_color">
+      <property name="title">
+       <string>Filter</string>
+      </property>
+      <widget class="QMenu" name="menuNode__full_color">
+       <property name="title">
+        <string>Node</string>
+       </property>
+       <widget class="QMenu" name="menu4__full_color_filter">
+        <property name="title">
+         <string>4</string>
+        </property>
+        <addaction name="actionConvolution_1_full_color_filter4node"/>
+        <addaction name="actionConvolution_2_full_color_filter4node"/>
+        <addaction name="actionConvolution_3_full_color_filter4node"/>
+       </widget>
+       <widget class="QMenu" name="menu8__full_color_filter">
+        <property name="title">
+         <string>8</string>
+        </property>
+        <addaction name="actionConvolution_1_full_color_filter8node"/>
+        <addaction name="actionConvolution_2_full_color_filter8node"/>
+        <addaction name="actionConvolution_3_full_color_filter8node"/>
+       </widget>
+       <addaction name="menu4__full_color_filter"/>
+       <addaction name="menu8__full_color_filter"/>
+      </widget>
+      <addaction name="menuNode__full_color"/>
+      <addaction name="actionAverage_full_color_filter"/>
+      <addaction name="actionGaussian_full_color_filter"/>
+      <addaction name="actionMedian_full_color_filter"/>
+     </widget>
+     <widget class="QMenu" name="menuNoise">
+      <property name="title">
+       <string>Noise</string>
+      </property>
+      <widget class="QMenu" name="menuGaussian_2">
+       <property name="title">
+        <string>Gaussian</string>
+       </property>
+       <widget class="QMenu" name="menuProbability_3">
+        <property name="title">
+         <string>Probability</string>
+        </property>
+        <addaction name="action5_full_color_noise_gaussian"/>
+        <addaction name="action10_full_color_noise_gaussian"/>
+        <addaction name="action20_full_color_noise_gaussian"/>
+        <addaction name="action30_full_color_noise_gaussian"/>
+        <addaction name="action40_full_color_noise_gaussian"/>
+       </widget>
+       <addaction name="actionGaussian_full_color_gaussian"/>
+       <addaction name="menuProbability_3"/>
+      </widget>
+      <widget class="QMenu" name="menuSpeckle_2">
+       <property name="title">
+        <string>Speckle</string>
+       </property>
+       <widget class="QMenu" name="menuProbability_4">
+        <property name="title">
+         <string>Probability</string>
+        </property>
+        <addaction name="action5_full_color_noise_speckle"/>
+        <addaction name="action10_full_color_noise_speckle"/>
+        <addaction name="action20_full_color_noise_speckle"/>
+        <addaction name="action30_full_color_noise_speckle"/>
+        <addaction name="action40_full_color_noise_speckle"/>
+       </widget>
+       <addaction name="actionSpeckle_full_color_noise"/>
+       <addaction name="menuProbability_4"/>
+      </widget>
+      <widget class="QMenu" name="menuSalt_and_Pepper_2">
+       <property name="title">
+        <string>Salt and Pepper</string>
+       </property>
+       <widget class="QMenu" name="menuProbability_5">
+        <property name="title">
+         <string>Probability</string>
+        </property>
+        <addaction name="action5_full_color_salt_pepper"/>
+        <addaction name="action10_full_color_salt_pepper"/>
+        <addaction name="action20_full_color_salt_pepper"/>
+        <addaction name="action30_full_color_salt_pepper"/>
+        <addaction name="action40_full_color_salt_pepper"/>
+       </widget>
+       <addaction name="actionSalt_and_Pepper_noise_full_color"/>
+       <addaction name="menuProbability_5"/>
+      </widget>
+      <addaction name="menuGaussian_2"/>
+      <addaction name="menuSpeckle_2"/>
+      <addaction name="menuSalt_and_Pepper_2"/>
+     </widget>
+     <widget class="QMenu" name="menuMethod">
+      <property name="title">
+       <string>Method</string>
+      </property>
+      <addaction name="actionRobert_full_color_method"/>
+      <addaction name="actionPrewitt_full_color_method"/>
+      <addaction name="actionSobel_full_color_method"/>
+      <addaction name="actionLaplacian_full_color_method"/>
+     </widget>
+     <widget class="QMenu" name="menuSharpness_2">
+      <property name="title">
+       <string>Sharpness</string>
+      </property>
+      <addaction name="actionLPF_full_color_sharpness"/>
+      <addaction name="actionHPF_full_color_sharpness"/>
+      <addaction name="actionSharpness_full_color_sharpness"/>
+     </widget>
+     <addaction name="menuQuantization_full_color"/>
+     <addaction name="menuBrightness__full_color"/>
+     <addaction name="menuContrast__full_color"/>
+     <addaction name="actionInvers_full_color"/>
+     <addaction name="actionAutolevel_full_color"/>
+     <addaction name="menuFilter_full_color"/>
+     <addaction name="menuNoise"/>
+     <addaction name="menuMethod"/>
+     <addaction name="menuSharpness_2"/>
+     <addaction name="actionEqualization_full_color"/>
+    </widget>
+    <widget class="QMenu" name="menuRotate">
+     <property name="title">
+      <string>Rotate</string>
+     </property>
+     <addaction name="action90_rotate"/>
+     <addaction name="action180_rotate"/>
+     <addaction name="action270_rotate"/>
+     <addaction name="action360_rotate"/>
+    </widget>
+    <addaction name="menuFlip"/>
+    <addaction name="menuRotate"/>
+    <addaction name="menuLayer"/>
+    <addaction name="menuBlack_White"/>
+    <addaction name="menuDetection"/>
+    <addaction name="menuGrayscale"/>
+    <addaction name="menuFull_Color"/>
+   </widget>
+   <widget class="QMenu" name="menuChart">
+    <property name="title">
+     <string>Chart</string>
+    </property>
+    <addaction name="actionHistogram"/>
+    <addaction name="actionCDF"/>
+    <addaction name="actionPDF"/>
+    <addaction name="actionPDF_to_CDF"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuChart"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionHorizontal_flip">
+   <property name="text">
+    <string>Horizontal</string>
+   </property>
+  </action>
+  <action name="actionVertical_flip">
+   <property name="text">
+    <string>Vertical</string>
+   </property>
+  </action>
+  <action name="actionRGB_layer">
+   <property name="text">
+    <string>RGB</string>
+   </property>
+  </action>
+  <action name="actionRed_layer">
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="actionGreen_layer">
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="actionBlue_layer">
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="actionBlack_white_black_white">
+   <property name="text">
+    <string>Black White</string>
+   </property>
+  </action>
+  <action name="action100_blackWhite">
+   <property name="text">
+    <string>100</string>
+   </property>
+  </action>
+  <action name="action200_blackWhite">
+   <property name="text">
+    <string>200</string>
+   </property>
+  </action>
+  <action name="actionEdge_detection">
+   <property name="text">
+    <string>Edge</string>
+   </property>
+  </action>
+  <action name="actionHorizontal_line_detection">
+   <property name="text">
+    <string>Horizontal</string>
+   </property>
+  </action>
+  <action name="actionVertical_line_detection">
+   <property name="text">
+    <string>Vertical</string>
+   </property>
+  </action>
+  <action name="actionNode_detection">
+   <property name="text">
+    <string>Node</string>
+   </property>
+  </action>
+  <action name="actionRGB_grayscale">
+   <property name="text">
+    <string>RGB</string>
+   </property>
+  </action>
+  <action name="actionRed_grayscale">
+   <property name="text">
+    <string>Red</string>
+   </property>
+  </action>
+  <action name="actionGreen_grayscale">
+   <property name="text">
+    <string>Green</string>
+   </property>
+  </action>
+  <action name="actionBlue_grayscale">
+   <property name="text">
+    <string>Blue</string>
+   </property>
+  </action>
+  <action name="action8_grayscale_quantization">
+   <property name="text">
+    <string>8</string>
+   </property>
+  </action>
+  <action name="action16_grayscale_quantization">
+   <property name="text">
+    <string>16</string>
+   </property>
+  </action>
+  <action name="action32_grayscale_quantization">
+   <property name="text">
+    <string>32</string>
+   </property>
+  </action>
+  <action name="action64_grayscale_quantization">
+   <property name="text">
+    <string>64</string>
+   </property>
+  </action>
+  <action name="actionLow_grayscale_brightness">
+   <property name="text">
+    <string>Low</string>
+   </property>
+  </action>
+  <action name="actionMedium_grayscale_brightness">
+   <property name="text">
+    <string>Medium</string>
+   </property>
+  </action>
+  <action name="actionHigh_grayscale_brightness">
+   <property name="text">
+    <string>High</string>
+   </property>
+  </action>
+  <action name="actionLow_grayscale_contrast">
+   <property name="text">
+    <string>Low</string>
+   </property>
+  </action>
+  <action name="actionMedium_grayscale_contrast">
+   <property name="text">
+    <string>Medium</string>
+   </property>
+  </action>
+  <action name="actionHigh_grayscale_contrast">
+   <property name="text">
+    <string>High</string>
+   </property>
+  </action>
+  <action name="actionInvers_grayscale">
+   <property name="text">
+    <string>Invers</string>
+   </property>
+  </action>
+  <action name="actionAutolevel_grayscale">
+   <property name="text">
+    <string>Autolevel</string>
+   </property>
+  </action>
+  <action name="actionConvolution_1_grayscale_filter4node">
+   <property name="text">
+    <string>Convolution 1</string>
+   </property>
+  </action>
+  <action name="actionConvolution_2_grayscale_filter4node">
+   <property name="text">
+    <string>Convolution 2</string>
+   </property>
+  </action>
+  <action name="actionConvolution_3_grayscale_filter4node">
+   <property name="text">
+    <string>Convolution 3</string>
+   </property>
+  </action>
+  <action name="actionConvolution_1_grayscale_filter8node">
+   <property name="text">
+    <string>Convolution 1</string>
+   </property>
+  </action>
+  <action name="actionConvolution_2_grayscale_filter8node">
+   <property name="text">
+    <string>Convolution 2</string>
+   </property>
+  </action>
+  <action name="actionConvolution_3_grayscale_filter8node">
+   <property name="text">
+    <string>Convolution 3</string>
+   </property>
+  </action>
+  <action name="actionAverage_grayscale_filter">
+   <property name="text">
+    <string>Average</string>
+   </property>
+  </action>
+  <action name="actionGaussian_grayscale_filter">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="actionMedian_grayscale_filter">
+   <property name="text">
+    <string>Median</string>
+   </property>
+  </action>
+  <action name="actionGaussian_grayscale_noise_gaussian">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="actionRobert_grayscale_method">
+   <property name="text">
+    <string>Robert</string>
+   </property>
+  </action>
+  <action name="actionPrewitt_grayscale_method">
+   <property name="text">
+    <string>Prewitt</string>
+   </property>
+  </action>
+  <action name="actionSobel_grayscale_method">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_grayscale_method">
+   <property name="text">
+    <string>Laplacian</string>
+   </property>
+  </action>
+  <action name="action5_grayscale_noise_gaussian">
+   <property name="text">
+    <string>5%</string>
+   </property>
+  </action>
+  <action name="action10_grayscale_noise_gaussian">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20_grayscale_noise_gaussian">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30_grayscale_noise_gaussian">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40_grayscale_noise_gaussian">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="actionSpeckle_grayscale_noise_speckle">
+   <property name="text">
+    <string>Speckle</string>
+   </property>
+  </action>
+  <action name="action5_grayscale_noise_speckle">
+   <property name="text">
+    <string>5%</string>
+   </property>
+  </action>
+  <action name="action10_grayscale_noise_speckle">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20_grayscale_noise_speckle">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30_grayscale_noise_speckle">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40_grayscale_noise_speckle">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="actionSalt_and_Pepper_grayscale_noise_saltnpepper">
+   <property name="text">
+    <string>Salt and Pepper</string>
+   </property>
+  </action>
+  <action name="action5_noise_saltnpepper">
+   <property name="text">
+    <string>5%</string>
+   </property>
+  </action>
+  <action name="action10_noise_saltnpepper">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20_noise_saltnpepper">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30_noise_saltnpepper">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40_noise_saltnpepper">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="action8_full_color_quantization">
+   <property name="text">
+    <string>8</string>
+   </property>
+  </action>
+  <action name="action16_full_color_quantization">
+   <property name="text">
+    <string>16</string>
+   </property>
+  </action>
+  <action name="action32_full_color_quantization">
+   <property name="text">
+    <string>32</string>
+   </property>
+  </action>
+  <action name="action64_full_color_quantization">
+   <property name="text">
+    <string>64</string>
+   </property>
+  </action>
+  <action name="actionLow_full_color_brightness">
+   <property name="text">
+    <string>Low</string>
+   </property>
+  </action>
+  <action name="actionMedium_full_color_brightness">
+   <property name="text">
+    <string>Medium</string>
+   </property>
+  </action>
+  <action name="actionHigh_full_color_brightness">
+   <property name="text">
+    <string>High</string>
+   </property>
+  </action>
+  <action name="actionLow_full_color_contrast">
+   <property name="text">
+    <string>Low</string>
+   </property>
+  </action>
+  <action name="actionMedium_full_color_contrast">
+   <property name="text">
+    <string>Medium</string>
+   </property>
+  </action>
+  <action name="actionHigh_full_color_contrast">
+   <property name="text">
+    <string>High</string>
+   </property>
+  </action>
+  <action name="actionInvers_full_color">
+   <property name="text">
+    <string>Invers</string>
+   </property>
+  </action>
+  <action name="actionAutolevel_full_color">
+   <property name="text">
+    <string>Autolevel</string>
+   </property>
+  </action>
+  <action name="actionAverage_full_color_filter">
+   <property name="text">
+    <string>Average</string>
+   </property>
+  </action>
+  <action name="actionGaussian_full_color_filter">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="actionMedian_full_color_filter">
+   <property name="text">
+    <string>Median</string>
+   </property>
+  </action>
+  <action name="actionConvolution_1_full_color_filter4node">
+   <property name="text">
+    <string>Convolution 1</string>
+   </property>
+  </action>
+  <action name="actionConvolution_2_full_color_filter4node">
+   <property name="text">
+    <string>Convolution 2</string>
+   </property>
+  </action>
+  <action name="actionConvolution_3_full_color_filter4node">
+   <property name="text">
+    <string>Convolution 3</string>
+   </property>
+  </action>
+  <action name="actionConvolution_1_full_color_filter8node">
+   <property name="text">
+    <string>Convolution 1</string>
+   </property>
+  </action>
+  <action name="actionConvolution_2_full_color_filter8node">
+   <property name="text">
+    <string>Convolution 2</string>
+   </property>
+  </action>
+  <action name="actionConvolution_3_full_color_filter8node">
+   <property name="text">
+    <string>Convolution 3</string>
+   </property>
+  </action>
+  <action name="actionGaussian_full_color_gaussian">
+   <property name="text">
+    <string>Gaussian</string>
+   </property>
+  </action>
+  <action name="action5_full_color_noise_gaussian">
+   <property name="text">
+    <string>5%</string>
+   </property>
+  </action>
+  <action name="action10_full_color_noise_gaussian">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20_full_color_noise_gaussian">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30_full_color_noise_gaussian">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40_full_color_noise_gaussian">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="actionSpeckle_full_color_noise">
+   <property name="text">
+    <string>Speckle</string>
+   </property>
+  </action>
+  <action name="action5_full_color_noise_speckle">
+   <property name="text">
+    <string>5%</string>
+   </property>
+  </action>
+  <action name="action10_full_color_noise_speckle">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20_full_color_noise_speckle">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30_full_color_noise_speckle">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40_full_color_noise_speckle">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="action5_full_color_noise_saltnpepper">
+   <property name="text">
+    <string>5%</string>
+   </property>
+  </action>
+  <action name="action10_full_color_noise_saltnpepper">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20_full_color_noise_saltnpepper">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30_full_color_noise_saltnpepper">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40_full_color_noise_saltnpepper">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="actionRobert_full_color_method">
+   <property name="text">
+    <string>Robert</string>
+   </property>
+  </action>
+  <action name="actionPrewitt_full_color_method">
+   <property name="text">
+    <string>Prewitt</string>
+   </property>
+  </action>
+  <action name="actionSobel_full_color_method">
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_full_color_method">
+   <property name="text">
+    <string>Laplacian</string>
+   </property>
+  </action>
+  <action name="actionHistogram">
+   <property name="text">
+    <string>Histogram</string>
+   </property>
+  </action>
+  <action name="actionEqualization">
+   <property name="text">
+    <string>Equalization</string>
+   </property>
+  </action>
+  <action name="actionCDF">
+   <property name="text">
+    <string>CDF</string>
+   </property>
+  </action>
+  <action name="actionPDF">
+   <property name="text">
+    <string>PDF</string>
+   </property>
+  </action>
+  <action name="actionAverage_threshold_black_white">
+   <property name="text">
+    <string>Average</string>
+   </property>
+  </action>
+  <action name="action90_rotate">
+   <property name="text">
+    <string>90</string>
+   </property>
+  </action>
+  <action name="action180_rotate">
+   <property name="text">
+    <string>180</string>
+   </property>
+  </action>
+  <action name="action270_rotate">
+   <property name="text">
+    <string>270</string>
+   </property>
+  </action>
+  <action name="action360_rotate">
+   <property name="text">
+    <string>360</string>
+   </property>
+  </action>
+  <action name="actionLPF_grayscale_sharpness">
+   <property name="text">
+    <string>LPF</string>
+   </property>
+  </action>
+  <action name="actionHPF_grayscale_sharpness">
+   <property name="text">
+    <string>HPF</string>
+   </property>
+  </action>
+  <action name="actionLPF_full_color_sharpness">
+   <property name="text">
+    <string>LPF</string>
+   </property>
+  </action>
+  <action name="actionHPF_full_color_sharpness">
+   <property name="text">
+    <string>HPF</string>
+   </property>
+  </action>
+  <action name="actionSharpness_grayscale_sharpness">
+   <property name="text">
+    <string>Sharpness</string>
+   </property>
+  </action>
+  <action name="actionSharpness_full_color_sharpness">
+   <property name="text">
+    <string>Sharpness</string>
+   </property>
+  </action>
+  <action name="actionSalt_and_Pepper_noise_full_color">
+   <property name="text">
+    <string>Salt and Pepper</string>
+   </property>
+  </action>
+  <action name="action5_full_color_salt_pepper">
+   <property name="text">
+    <string>5%</string>
+   </property>
+  </action>
+  <action name="action10_full_color_salt_pepper">
+   <property name="text">
+    <string>10%</string>
+   </property>
+  </action>
+  <action name="action20_full_color_salt_pepper">
+   <property name="text">
+    <string>20%</string>
+   </property>
+  </action>
+  <action name="action30_full_color_salt_pepper">
+   <property name="text">
+    <string>30%</string>
+   </property>
+  </action>
+  <action name="action40_full_color_salt_pepper">
+   <property name="text">
+    <string>40%</string>
+   </property>
+  </action>
+  <action name="actionEqualization_grayscale">
+   <property name="text">
+    <string>Equalization</string>
+   </property>
+  </action>
+  <action name="actionEqualization_full_color">
+   <property name="text">
+    <string>Equalization</string>
+   </property>
+  </action>
+  <action name="actionPDF_to_CDF">
+   <property name="text">
+    <string>PDF to CDF</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QtCharts::QChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">QtCharts/QChartView&gt;
+#include &lt;QtCharts/chartsnamespace.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
